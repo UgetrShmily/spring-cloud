@@ -1,0 +1,11 @@
+server:
+  port: 8101
+  servlet:    context-path: /
+    
+spring:  mvc:    view:      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+dubbo:  scan:    base-packages: com.my.mall
+  application:    name: mall-web
+  registry:
+    address: zookeeper://192.168.65.128:2181?backup=192.168.65.128:2182,192.168.65.128:2183
